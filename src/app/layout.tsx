@@ -4,14 +4,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
+import { LanguageProvider } from "@/context/LanguageContext";
+
 const inter = Inter({
   variable: "--font-inter",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
 });
 
 export const metadata: Metadata = {
@@ -25,14 +27,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className={inter.className}>
-        <Navbar />
-        <main style={{ flex: 1, marginTop: "80px" }}>
-          {children}
-        </main>
-        <Footer />
-      </body>
-    </html>
+    <LanguageProvider>
+      <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+        <body className={inter.className}>
+          <Navbar />
+          <main style={{ flex: 1, marginTop: "80px" }}>
+            {children}
+          </main>
+          <Footer />
+        </body>
+      </html>
+    </LanguageProvider>
   );
 }

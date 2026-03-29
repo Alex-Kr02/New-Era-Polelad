@@ -3,12 +3,20 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
+import { useLanguage } from '@/context/LanguageContext';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t, language } = useTranslation();
+  const { setLanguage } = useLanguage();
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'el' : 'en');
+  };
 
   return (
     <nav className={styles.navbar}>
@@ -21,25 +29,35 @@ export default function Navbar() {
 
         {/* Desktop Links */}
         <div className={styles.navLinks}>
-          <Link href="/" className={styles.link}>Home</Link>
-          <Link href="/about" className={styles.link}>About</Link>
-          <Link href="/classes" className={styles.link}>Classes</Link>
-          <Link href="/instructors" className={styles.link}>Instructors</Link>
-          <Link href="/contact" className={styles.btnNav}>Book Now</Link>
+          <Link href="/" className={styles.link}>{t('nav.home')}</Link>
+          <Link href="/about" className={styles.link}>{t('nav.about')}</Link>
+          <Link href="/classes" className={styles.link}>{t('nav.classes')}</Link>
+          <Link href="/instructors" className={styles.link}>{t('nav.instructors')}</Link>
+          
+          <button onClick={toggleLanguage} className={styles.langToggle}>
+            {language === 'en' ? 'EN | GR' : 'GR | EN'}
+          </button>
+          
+          <Link href="/contact" className={styles.btnNav}>{t('nav.bookNow')}</Link>
         </div>
 
         {/* Mobile Toggle Button */}
-        <button className={styles.mobileToggle} onClick={toggleMenu} aria-label="Toggle Menu">
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <div className={styles.mobileActions}>
+          <button onClick={toggleLanguage} className={styles.langToggleMobile}>
+            {language === 'en' ? 'GR' : 'EN'}
+          </button>
+          <button className={styles.mobileToggle} onClick={toggleMenu} aria-label="Toggle Menu">
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
 
         {/* Mobile Menu Overlay */}
         <div className={`${styles.mobileMenu} ${isOpen ? styles.active : ''}`}>
-          <Link href="/" className={styles.mobileLink} onClick={toggleMenu}>Home</Link>
-          <Link href="/about" className={styles.mobileLink} onClick={toggleMenu}>About</Link>
-          <Link href="/classes" className={styles.mobileLink} onClick={toggleMenu}>Classes</Link>
-          <Link href="/instructors" className={styles.mobileLink} onClick={toggleMenu}>Instructors</Link>
-          <Link href="/contact" className={styles.mobileBtn} onClick={toggleMenu}>Book Now</Link>
+          <Link href="/" className={styles.mobileLink} onClick={toggleMenu}>{t('nav.home')}</Link>
+          <Link href="/about" className={styles.mobileLink} onClick={toggleMenu}>{t('nav.about')}</Link>
+          <Link href="/classes" className={styles.mobileLink} onClick={toggleMenu}>{t('nav.classes')}</Link>
+          <Link href="/instructors" className={styles.mobileLink} onClick={toggleMenu}>{t('nav.instructors')}</Link>
+          <Link href="/contact" className={styles.mobileBtn} onClick={toggleMenu}>{t('nav.bookNow')}</Link>
         </div>
       </div>
     </nav>

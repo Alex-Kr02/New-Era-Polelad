@@ -1,17 +1,20 @@
+'use client';
+
+import { useTranslation } from '@/hooks/useTranslation';
 import styles from './contact.module.css';
 
-export const metadata = {
-  title: 'Contact Us | New Era Polelad',
-  description: 'Book your exotic pole dancing class or reach out to the New Era Polelad team.',
-};
-
 export default function Contact() {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1 className={`${styles.title} animate-fade-in`}>Get in <span className="neonText">Touch</span></h1>
+        <h1 
+          className={`${styles.title} animate-fade-in`}
+          dangerouslySetInnerHTML={{ __html: t('contact.title') }}
+        />
         <p className={`${styles.subtitle} animate-fade-in animate-delay-1`}>
-          Ready to start your journey? Book a class or drop us a message.
+          {t('contact.subtitle')}
         </p>
       </header>
 
@@ -19,57 +22,57 @@ export default function Contact() {
         <div className={`${styles.grid} animate-fade-in animate-delay-2`}>
           {/* Contact Details */}
           <div className={`${styles.infoCard} glass-panel`}>
-            <h2>Studio Information</h2>
+            <h2>{t('contact.infoTitle')}</h2>
             
             <div className={styles.infoBlock}>
-              <h3>Visit Us</h3>
+              <h3>{t('contact.visitUs')}</h3>
               <p>123 Neon Avenue, Floor 4</p>
               <p>Metropolis, NY 10001</p>
             </div>
             
             <div className={styles.infoBlock}>
-              <h3>Contact</h3>
+              <h3>{t('contact.contact')}</h3>
               <p>Email: hello@newerapolelad.com</p>
               <p>Phone: +1 (555) 123-4567</p>
             </div>
             
             <div className={styles.infoBlock}>
-              <h3>Hours</h3>
-              <p>Mon - Fri: 10:00 AM - 9:00 PM</p>
-              <p>Sat - Sun: 9:00 AM - 5:00 PM</p>
+              <h3>{t('contact.hours')}</h3>
+              <p>{t('contact.monFri')}: 10:00 AM - 9:00 PM</p>
+              <p>{t('contact.satSun')}: 9:00 AM - 5:00 PM</p>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className={`${styles.formCard} glass-panel`}>
-            <h2>Send a Message</h2>
+            <h2>{t('contact.formTitle')}</h2>
             <form className={styles.form}>
               <div className={styles.inputGroup}>
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" placeholder="Your Name" required />
+                <label htmlFor="name">{t('contact.name')}</label>
+                <input type="text" id="name" placeholder={t('contact.placeholderName')} required />
               </div>
               
               <div className={styles.inputGroup}>
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" placeholder="your@email.com" required />
+                <label htmlFor="email">{t('contact.email')}</label>
+                <input type="email" id="email" placeholder={t('contact.placeholderEmail')} required />
               </div>
               
               <div className={styles.inputGroup}>
-                <label htmlFor="inquiry">Inquiry Type</label>
+                <label htmlFor="inquiry">{t('contact.inquiry')}</label>
                 <select id="inquiry">
-                  <option value="booking">Class Booking</option>
-                  <option value="private">Private Session</option>
-                  <option value="general">General Question</option>
+                  <option value="booking">{t('contact.booking')}</option>
+                  <option value="private">{t('contact.private')}</option>
+                  <option value="general">{t('contact.general')}</option>
                 </select>
               </div>
               
               <div className={styles.inputGroup}>
-                <label htmlFor="message">Message</label>
-                <textarea id="message" rows={4} placeholder="How can we help you?" required></textarea>
+                <label htmlFor="message">{t('contact.message')}</label>
+                <textarea id="message" rows={4} placeholder={t('contact.placeholderHelp')} required></textarea>
               </div>
               
               <button type="submit" className="btn-primary" style={{ width: '100%' }}>
-                Send Message
+                {t('contact.send')}
               </button>
             </form>
           </div>

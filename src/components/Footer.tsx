@@ -1,7 +1,12 @@
+'use client';
+
 import Link from 'next/link';
+import { useTranslation } from '@/hooks/useTranslation';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -10,22 +15,22 @@ export default function Footer() {
             <span className={styles.neonText}>New Era</span> Polelad
           </h2>
           <p className={styles.tagline}>
-            Empowering fitness and exotic dance in a premium environment.
+            {t('footer.tagline')}
           </p>
         </div>
         
         <div className={styles.linksBlock}>
-          <h3 className={styles.heading}>Explore</h3>
+          <h3 className={styles.heading}>{t('footer.explore')}</h3>
           <ul className={styles.list}>
-            <li><Link href="/about">About Us</Link></li>
-            <li><Link href="/classes">Classes</Link></li>
-            <li><Link href="/instructors">Instructors</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/about">{t('nav.about')}</Link></li>
+            <li><Link href="/classes">{t('nav.classes')}</Link></li>
+            <li><Link href="/instructors">{t('nav.instructors')}</Link></li>
+            <li><Link href="/contact">{t('nav.contact')}</Link></li>
           </ul>
         </div>
         
         <div className={styles.linksBlock}>
-          <h3 className={styles.heading}>Socials</h3>
+          <h3 className={styles.heading}>{t('footer.socials')}</h3>
           <ul className={styles.list}>
             <li><a href="#" target="_blank" rel="noreferrer">Instagram</a></li>
             <li><a href="#" target="_blank" rel="noreferrer">TikTok</a></li>
@@ -35,7 +40,7 @@ export default function Footer() {
       </div>
       
       <div className={styles.bottomBar}>
-        <p>&copy; {new Date().getFullYear()} New Era Polelad. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} New Era Polelad. {t('footer.rights')}</p>
       </div>
     </footer>
   );

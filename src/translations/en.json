@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "classes": "Classes",
+    "instructors": "Instructors",
+    "contact": "Contact",
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "title": "Unleash Your <span class='neonText'>Inner Power</span>",
+    "subtitle": "Premium exotic pole dancing classes for all levels. Elevate your fitness, confidence, and sensuality.",
+    "cta": "Explore Classes"
+  },
+  "programs": {
+    "title": "Our Programs",
+    "description": "Discover the perfect class tailored to your goals and experience level.",
+    "beginner": {
+      "title": "Beginner Pole",
+      "text": "Master the fundamentals of pole dancing in a supportive environment.",
+      "link": "Learn More →"
+    },
+    "exotic": {
+      "title": "Exotic Flow",
+      "text": "Embrace your sensuality with fluid, floorwork-heavy choreography.",
+      "link": "Learn More →"
+    },
+    "flexibility": {
+      "title": "Flexibility & Conditioning",
+      "text": "Improve your range of motion and build the strength needed for advanced tricks.",
+      "link": "Learn More →"
+    }
+  },
+  "philosophy": {
+    "title": "The New Era Philosophy",
+    "text": "At New Era Polelad, we believe that dance is a transformative journey. Our premium studio offers a safe, empowering space where you can express yourself, build incredible strength, and join a vibrant community of passionate individuals.",
+    "cta": "Read Our Story"
+  },
+  "footer": {
+    "tagline": "Empowering fitness and exotic dance in a premium environment.",
+    "explore": "Explore",
+    "socials": "Socials",
+    "rights": "All rights reserved."
+  },
+  "about": {
+    "title": "About <span class='neonText'>New Era</span>",
+    "subtitle": "Redefining fitness through the art of exotic pole dancing.",
+    "storyTitle": "Our Story",
+    "storyP1": "Founded by passionate dancers, New Era Polelad emerged from a desire to create a sanctuary where fitness meets sensual expression. We believe that everyone deserves to feel empowered, strong, and beautiful in their own skin.",
+    "storyP2": "Our academy is more than just a place to work out; it is a community of supportive individuals who celebrate each other's progress. Whether you are taking your first spin or perfecting a complex routine, you will find encouragement and expert guidance here.",
+    "instructorsTitle": "Meet Our Instructors",
+    "elena": {
+      "specialty": "Founder & Lead Exotic Flow Instructor",
+      "bio": "With over a decade of experience, Elena brings a mesmerizing style that emphasizes musicality and emotional storytelling."
+    },
+    "mia": {
+      "specialty": "Advanced Tricks & Conditioning",
+      "bio": "Mia focuses on building the foundational strength and technique required to execute gravity-defying pole tricks safely."
+    },
+    "sarah": {
+      "specialty": "Beginner Pole & Flexibility",
+      "bio": "Sarah's patient and encouraging teaching style makes her the perfect guide for those just starting their pole journey."
+    }
+  },
+  "classes": {
+    "title": "Our <span class='neonText'>Classes</span>",
+    "subtitle": "Find the perfect class to ignite your passion and elevate your skills.",
+    "beginner": {
+      "name": "Beginner Pole",
+      "level": "Level 1",
+      "desc": "Never touched a pole before? This class is for you! We cover the absolute basics, including posture, walking around the pole, basic spins, and entry-level climbs. You will build the foundational strength necessary to progress safely.",
+      "h1": "Basic grips and posture",
+      "h2": "Introductory spins",
+      "h3": "Conditioning for pole"
+    },
+    "exotic": {
+      "name": "Exotic Flow & Floorwork",
+      "level": "All Levels",
+      "desc": "Unleash your sensuality. This class focuses on the fluid transitions between the pole and the floor. Learn leg work, body waves, and mesmerizing choreography that emphasizes musicality and expression. Heels and knee pads are highly recommended!",
+      "h1": "Fluid transitions",
+      "h2": "Sensual choreography",
+      "h3": "Musicality expression"
+    },
+    "flexibility": {
+      "name": "Flexibility & Conditioning",
+      "level": "All Levels",
+      "desc": "A strong foundation is key to advanced pole tricks. In this class, we focus on deep, active stretching to increase your range of motion (splits, backbends) alongside targeted conditioning exercises to build your core and upper body strength.",
+      "h1": "Active flexibility drills",
+      "h2": "Core and upper body strength",
+      "h3": "Injury prevention"
+    },
+    "btn": "Book Session"
+  },
+  "contact": {
+    "title": "Get in <span class='neonText'>Touch</span>",
+    "subtitle": "Ready to start your journey? Book a class or drop us a message.",
+    "infoTitle": "Studio Information",
+    "visitUs": "Visit Us",
+    "contact": "Contact",
+    "hours": "Hours",
+    "monFri": "Mon - Fri",
+    "satSun": "Sat - Sun",
+    "formTitle": "Send a Message",
+    "name": "Name",
+    "email": "Email",
+    "inquiry": "Inquiry Type",
+    "booking": "Class Booking",
+    "private": "Private Session",
+    "general": "General Question",
+    "message": "Message",
+    "placeholderName": "Your Name",
+    "placeholderEmail": "your@email.com",
+    "placeholderHelp": "How can we help you?",
+    "send": "Send Message"
+  }
+}
