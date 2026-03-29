@@ -193,6 +193,10 @@
 }
 
 @media (max-width: 992px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
   .navLinks {
     display: none;
   }
