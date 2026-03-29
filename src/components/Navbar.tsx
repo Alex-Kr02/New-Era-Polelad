@@ -21,6 +21,10 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
+        <button onClick={toggleLanguage} className={styles.langToggleMobile}>
+          {language === 'en' ? 'GR' : 'EN'}
+        </button>
+
         <div className={styles.logo}>
           <Link href="/">
             <span className={styles.neonText}>New Era</span> Polelad
@@ -43,9 +47,6 @@ export default function Navbar() {
 
         {/* Mobile Toggle Button */}
         <div className={styles.mobileActions}>
-          <button onClick={toggleLanguage} className={styles.langToggleMobile}>
-            {language === 'en' ? 'GR' : 'EN'}
-          </button>
           <button className={styles.mobileToggle} onClick={toggleMenu} aria-label="Toggle Menu">
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

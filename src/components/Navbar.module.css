@@ -167,6 +167,7 @@
 }
 
 .langToggleMobile {
+  display: none;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--glass-border);
   color: var(--foreground);
@@ -176,6 +177,12 @@
   font-size: 0.75rem;
   font-weight: 700;
   transition: var(--transition);
+}
+
+@media (max-width: 992px) {
+  .langToggleMobile {
+    display: block;
+  }
 }
 
 @media (max-width: 992px) {
