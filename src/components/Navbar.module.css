@@ -142,7 +142,7 @@
 }
 
 .mobileActions {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 1rem;
 }
@@ -185,5 +185,9 @@
 
   .mobileToggle {
     display: block;
+  }
+
+  .mobileActions {
+    display: flex;
   }
 }
