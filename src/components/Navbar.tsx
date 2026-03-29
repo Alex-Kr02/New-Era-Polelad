@@ -27,18 +27,19 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop Links */}
+        {/* Desktop Links - Now Centered */}
         <div className={styles.navLinks}>
           <Link href="/" className={styles.link}>{t('nav.home')}</Link>
           <Link href="/about" className={styles.link}>{t('nav.about')}</Link>
           <Link href="/classes" className={styles.link}>{t('nav.classes')}</Link>
           <Link href="/instructors" className={styles.link}>{t('nav.instructors')}</Link>
           <Link href="/contact" className={styles.btnNav}>{t('nav.bookNow')}</Link>
-
-          <button onClick={toggleLanguage} className={styles.langToggle}>
-            {language === 'en' ? 'GR' : 'EN'}
-          </button>
         </div>
+
+        {/* Desktop Language Toggle - Now Far Right */}
+        <button onClick={toggleLanguage} className={styles.langToggle}>
+          {language === 'en' ? 'GR' : 'EN'}
+        </button>
 
         {/* Mobile Toggle Button */}
         <div className={styles.mobileActions}>

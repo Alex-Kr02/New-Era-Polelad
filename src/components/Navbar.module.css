@@ -157,13 +157,18 @@
   font-size: 0.85rem;
   font-weight: 600;
   transition: var(--transition);
-  margin-left: 0.5rem;
 }
 
 .langToggle:hover {
   border-color: var(--primary);
   color: var(--primary);
   background: rgba(217, 70, 239, 0.05);
+}
+
+@media (max-width: 992px) {
+  .langToggle {
+    display: none;
+  }
 }
 
 .langToggleMenu {
