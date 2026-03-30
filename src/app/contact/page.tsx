@@ -26,8 +26,8 @@ export default function Contact() {
             
             <div className={styles.infoBlock}>
               <h3>{t('contact.visitUs')}</h3>
-              <p>123 Neon Avenue, Floor 4</p>
-              <p>Metropolis, NY 10001</p>
+              <p>Agiou Trifonos 8</p>
+              <p>Kifisia 145 62</p>
             </div>
             
             <div className={styles.infoBlock}>
