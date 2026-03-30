@@ -41,6 +41,15 @@ export default function Contact() {
               <p>{t('contact.monFri')}: 10:00 AM - 9:00 PM</p>
               <p>{t('contact.satSun')}: 9:00 AM - 5:00 PM</p>
             </div>
+
+            <div className={styles.infoBlock}>
+              <h3>{t('footer.socials')}</h3>
+              <p>
+                <a href="https://www.instagram.com/new_era_polelab_kifisia/" target="_blank" rel="noreferrer" className={styles.link}>
+                  Instagram: @new_era_polelab_kifisia
+                </a>
+              </p>
+            </div>
           </div>
 
           {/* Contact Form */}
