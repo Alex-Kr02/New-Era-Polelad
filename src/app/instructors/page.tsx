@@ -21,9 +21,6 @@ export default function Instructors() {
       <section className={styles.instructorSection}>
         <div className={styles.grid}>
           {[
-            { id: 'elena', name: 'Elena', img: '/images/elena.jpg' },
-            { id: 'mia', name: 'Mia', img: '/images/mia.jpg' },
-            { id: 'sarah', name: 'Sarah', img: '/images/sarah.jpg' },
             { id: 'melina', name: 'Melina', img: '/images/melina.jpg' },
           ].map((inst) => (
             <div key={inst.id} className={`${styles.instructorCard} animate-fade-in`}>
