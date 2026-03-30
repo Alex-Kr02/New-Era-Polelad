@@ -34,7 +34,6 @@ export default function Footer() {
           <ul className={styles.list}>
             <li><a href="https://www.instagram.com/new_era_polelab_kifisia/" target="_blank" rel="noreferrer">Instagram</a></li>
             <li><a href="#" target="_blank" rel="noreferrer">TikTok</a></li>
-            <li><a href="#" target="_blank" rel="noreferrer">YouTube</a></li>
           </ul>
         </div>
       </div>
