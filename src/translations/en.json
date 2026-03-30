@@ -60,6 +60,10 @@
     "sarah": {
       "specialty": "Beginner Pole & Flexibility",
       "bio": "Sarah's patient and encouraging teaching style makes her the perfect guide for those just starting their pole journey."
+    },
+    "melina": {
+      "specialty": "Dynamic Pole & Power",
+      "bio": "Melina specializes in explosive power moves and dynamic tricks, bringing an intense energy that pushes students to discover their ultimate strength."
     }
   },
   "classes": {
